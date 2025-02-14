@@ -25,3 +25,34 @@
 .text-h3 {
   font: var(--text-h3);
 }
+
+
+.card {
+  position: relative;
+
+  border-radius: 4px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    background: linear-gradient(180deg, transparent 0%, #020617 100%);
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+
+    padding: 24px;
+
+    &:has(.text-h3){
+      padding: 12px;
+    }
+
+    h1 {
+      margin-top: 8px;
+    }
+  }
+}

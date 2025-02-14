@@ -1,3 +1,27 @@
+section header {
+  justify-content: space-between;
+  padding-block: 12px 24px;
+  border-top: 1px solid var(--stroke-color);
+
+  font: var(--text-span);
+
+  a {
+    align-items: center;
+    gap: 8px;
+    span {
+      background-image: url(../assets/icons/ArrowRight.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover span {
+      background-image: url(../assets/icons/ArrowRight-hover.svg);
+    }
+  }
+}
+
 #featured {
   img {
     height: 100%;
@@ -5,32 +29,26 @@
   }
 }
 
-.card {
-  position: relative;
-
-  border-radius: 4px;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    top: 50%;
-    background: linear-gradient(180deg, transparent 0%, #020617 100%);
+#weekly {
+  p {
+    margin-top: 8px;
+    font: var(--text-h2);
   }
 
-  figcaption {
-    position: absolute;
-    bottom: 0;
+  & > div {
+    grid-template-columns: repeat(4, 292px);
+  }
 
-    padding: 24px;
+  img {
+    height: 160px;
+  }
 
-    &:has(.text-h3){
-      padding: 12px;
-    }
+  figure {
+    position: relative;
 
-    h1 {
-      margin-top: 8px;
+    .content-tag {
+      margin: 8px;
+      position: absolute;
     }
   }
 }
